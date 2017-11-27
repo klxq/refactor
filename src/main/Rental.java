@@ -1,4 +1,4 @@
-package original;
+package main;
 
 public class Rental {
     private Movie movie;
