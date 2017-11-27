@@ -18,10 +18,7 @@ public class Customer {
         String result = "Rental Record for " + this.getName() + "\n";
 
         while (rentals.hasMoreElements()) {
-            double thisAmount = 0L;
             Rental rental = (Rental) rentals.nextElement();
-
-            thisAmount = rental.getCharge();
 
             // add frequent renter points
             frequentRenterPoints++;
@@ -33,8 +30,8 @@ public class Customer {
             }
 
             // show figures for this rental
-            result += "\t" + rental.getMovie().getTitle() + "\t" + String.valueOf(thisAmount) + "\n";
-            totalAmount += thisAmount;
+            result += "\t" + rental.getMovie().getTitle() + "\t" + String.valueOf(rental.getCharge()) + "\n";
+            totalAmount += rental.getCharge();
         }
 
         // add footer lines
